@@ -9,7 +9,7 @@ pipeline {
       stages {           
            stage('Timestamp') {
                 steps {
-                   sh 'timestamp.sh'
+                   sh './timestamp.sh'
                }
          }
  
