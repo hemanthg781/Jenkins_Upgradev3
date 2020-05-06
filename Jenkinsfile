@@ -3,11 +3,16 @@ pipeline {
           triggers {
              cron('0 */5 * * *')
                 
-          #!/bin/bash
-            echo "hello, today is $(date)" > /tmp/hemanth.txt    
-          
+ 
           }
       
+      stages {
+             stage('Timestamp') {
+        steps {
+            sh 'timestamp.sh'
+        }
+        }
+      } 
       stages {
             stage('DEV') {
                   steps {
