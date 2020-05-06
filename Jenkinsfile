@@ -9,7 +9,7 @@ pipeline {
       stages {           
            stage('Timestamp') {
                 steps {
-                   sh chmod +x './timestamp.sh'
+                   sh "chmod +x ./timestamp.sh"
                }
          }
  
