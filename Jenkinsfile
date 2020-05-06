@@ -1,5 +1,13 @@
 pipeline {
       agent any
+          triggers {
+             cron('0 */5 * * *')
+                
+          #!/bin/bash
+            echo "hello, today is $(date)" > /tmp/hemanth.txt    
+          
+          }
+      
       stages {
             stage('DEV') {
                   steps {
