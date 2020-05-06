@@ -6,14 +6,14 @@ pipeline {
  
           }
       
-      stages {
-             stage('Timestamp') {
-        steps {
-            sh 'timestamp.sh'
-        }
-        }
-      } 
-      stages {
+      stages {           
+           stage('Timestamp') {
+                steps {
+                   sh 'timestamp.sh'
+               }
+         }
+ 
+ 
             stage('DEV') {
                   steps {
                         echo 'Hi Hemanth, this is DEV Stage'
